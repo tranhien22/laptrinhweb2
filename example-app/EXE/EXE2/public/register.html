@@ -1,0 +1,51 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-between min-h-screen">
+    <!-- Navigation -->
+    <nav class="w-full bg-white py-2 border-b border-gray-300">
+        <div class="text-center">
+            <a href="#" class="mx-2 text-black">Home</a> |
+            <a href="#" class="mx-2 text-black">Đăng nhập</a> |
+            <a href="#" class="mx-2 text-black">Đăng ký</a>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <div class="flex-grow flex items-center justify-center">
+        <div class="border border-gray-400 p-8">
+            <h2 class="text-center mb-6 text-xl">Màn hình đăng ký</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="username" class="block">Username</label>
+                    <input type="text" id="username" class="w-full border border-gray-400 p-2">
+                </div>
+                <div>
+                    <label for="password" class="block">Mật khẩu</label>
+                    <input type="password" id="password" class="w-full border border-gray-400 p-2">
+                </div>
+                <div>
+                    <label for="confirm-password" class="block">Nhập lại mật khẩu</label>
+                    <input type="password" id="confirm-password" class="w-full border border-gray-400 p-2">
+                </div>
+                <div>
+                    <label for="email" class="block">Email</label>
+                    <input type="email" id="email" class="w-full border border-gray-400 p-2">
+                </div>
+                <div class="flex justify-between items-center">
+                    <a href="#" class="text-blue-500">Đã có tài khoản</a>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2">Đăng ký</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full bg-white py-2 border-t border-gray-300">
+        <div class="text-center">
+            Lập trình web ©01/2024
+        </div>
+    </footer>
+</body>
+</html>

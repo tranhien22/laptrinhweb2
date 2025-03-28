@@ -1,0 +1,42 @@
+CREATE DATABASE IF NOT EXISTS BKE_User_Management;
+USE BKE_User_Management;
+
+-- Bảng users
+CREATE TABLE users (
+    user_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    user_name VARCHAR(25) NOT NULL,
+    user_email VARCHAR(55) NOT NULL UNIQUE,
+    user_pass VARCHAR(255) NOT NULL,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Bảng products
+CREATE TABLE products (
+    product_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(255) NOT NULL,
+    product_price DOUBLE NOT NULL,
+    product_description TEXT NOT NULL,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Bảng orders
+CREATE TABLE orders (
+    order_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(11) NOT NULL,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+-- Bảng order_details
+CREATE TABLE order_details (
+    order_detail_id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    order_id INT(11) NOT NULL,
+    product_id INT(11) NOT NULL,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE
+);

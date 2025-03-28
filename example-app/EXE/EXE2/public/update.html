@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-between min-h-screen">
+    <!-- Header -->
+    <header class="w-full border-b">
+        <nav class="flex justify-center py-2">
+            <a href="#" class="mx-2">Home</a>
+            <a href="#" class="mx-2">Đăng nhập</a>
+            <a href="#" class="mx-2">Đăng ký</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center">
+        <div class="border p-8">
+            <h1 class="text-center mb-6">Màn hình cập nhật</h1>
+            <form class="space-y-4">
+                <div>
+                    <label for="username" class="block">Username</label>
+                    <input type="text" id="username" class="w-full border px-2 py-1" value="xxx">
+                </div>
+                <div>
+                    <label for="password" class="block">Mật khẩu</label>
+                    <input type="password" id="password" class="w-full border px-2 py-1" value="xxx">
+                </div>
+                <div>
+                    <label for="confirm-password" class="block">Nhập lại mật khẩu</label>
+                    <input type="password" id="confirm-password" class="w-full border px-2 py-1" value="xxx">
+                </div>
+                <div>
+                    <label for="email" class="block">Email</label>
+                    <input type="email" id="email" class="w-full border px-2 py-1" value="xxx">
+                </div>
+                <div class="text-center">
+                    <a href="#" class="text-blue-600">Đã có tài khoản</a>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-600 text-white px-4 py-2">Đăng ký</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t py-2 text-center">
+        Lập trình web @01/2024
+    </footer>
+</body>
+</html>
